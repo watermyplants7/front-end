@@ -6,6 +6,7 @@ import LandingPage from './components/landingPage/landingPage';
 import Login from './components/login';
 import AddPlant from './components/AddPlant';
 import EditPlant from './components/EditPlant';
+import Logout from './components/logout';
 
 function App() {
   return (
@@ -13,18 +14,19 @@ function App() {
       <h1>Replace this element with Header component</h1>
       <Router>
         <Switch>
-          <PrivateRoute path='/edit' component={EditPlant}/>
-          <PrivateRoute path='/add' component={AddPlant}/>
+        <Route exact path='/'>
+            <div>pre-login home page</div>
+          </Route>
           <Route path='/register'>
             <Register />
           </Route>
           <Route path='/login'>
             <Login />
           </Route>
-          <Route exact path='/'>
-            <div>pre-login home page</div>
-          </Route>
           <PrivateRoute path='/home' component={LandingPage}/>
+          <PrivateRoute path='/edit' component={EditPlant}/>
+          <PrivateRoute path='/add' component={AddPlant} />
+          <PrivateRoute path='/logout' component={Logout}/>
         </Switch>
       </Router>
     </div>
