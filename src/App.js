@@ -4,6 +4,8 @@ import PrivateRoute from './components/PrivateRoute';
 import Register from './components/Register';
 import LandingPage from './components/landingPage/landingPage';
 import Login from './components/login';
+import AddPlant from './components/AddPlant';
+import EditPlant from './components/EditPlant';
 
 function App() {
   return (
@@ -11,6 +13,8 @@ function App() {
       <h1>Replace this element with Header component</h1>
       <Router>
         <Switch>
+          <PrivateRoute path='/edit' component={EditPlant}/>
+          <PrivateRoute path='/add' component={AddPlant}/>
           <Route path='/register'>
             <Register />
           </Route>
