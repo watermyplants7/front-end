@@ -8,11 +8,12 @@ import AddPlant from './components/AddPlant';
 import EditPlant from './components/EditPlant';
 import Logout from './components/logout';
 import { Header } from "./components/Header";
-
+import Footer from "./components/Footer";
 function App() {
   return (
     <div className="App">
       <Header />
+      <Footer />
       <Router>
         <Switch>
           <Route path="/register">
