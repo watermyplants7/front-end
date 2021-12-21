@@ -22,7 +22,10 @@ export function Header() {
   return (
     <NavbarStyled>
       <HeaderLogo>Water My Plants</HeaderLogo>
-      {/* links-to go here */}
+      <nav>
+        <l1>about</l1>
+        <l1>login</l1>
+      </nav>
     </NavbarStyled>
   );
 }
