@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-const StyleLogin = styled.div`
-  background-color: red;
-`;
+const StyleLogin = styled.div``;
 
 const initialFormValues = {
   phone: "",
