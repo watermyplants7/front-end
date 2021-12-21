@@ -1,26 +1,27 @@
-import './App.css';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import PrivateRoute from './components/PrivateRoute';
-import Register from './components/Register';
-import LandingPage from './components/landingPage/landingPage';
-import Login from './components/login';
+import "./App.css";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import PrivateRoute from "./components/PrivateRoute";
+import Register from "./components/Register";
+import LandingPage from "./components/landingPage/landingPage";
+import Login from "./components/login";
+import { Header } from "./components/Header";
 
 function App() {
   return (
     <div className="App">
-      <h1>Replace this element with Header component</h1>
+      <Header />
       <Router>
         <Switch>
-          <Route path='/register'>
+          <Route path="/register">
             <Register />
           </Route>
-          <Route path='/login'>
+          <Route path="/login">
             <Login />
           </Route>
-          <Route exact path='/'>
+          <Route exact path="/">
             <div>pre-login home page</div>
           </Route>
-          <PrivateRoute path='/home' component={LandingPage}/>
+          <PrivateRoute path="/home" component={LandingPage} />
         </Switch>
       </Router>
     </div>
