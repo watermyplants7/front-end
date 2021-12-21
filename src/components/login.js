@@ -24,7 +24,7 @@ const Login = (props) => {
   };
 
   return (
-    <StyleLogin>
+    <div>
       <h2>Login</h2>
       <form>
         <label>
@@ -47,7 +47,7 @@ const Login = (props) => {
         </label>
         <button onClick={handleSubmit}>Log in</button>
       </form>
-    </StyleLogin>
+    </div>
   );
 };
 

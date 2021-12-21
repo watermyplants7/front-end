@@ -3,13 +3,9 @@ import styled from "styled-components";
 import { MainGreen } from "../Theme/Colors";
 import { Logo } from "../Theme/Logo";
 
-const NavbarStyled = styled.div`
+const NavbarStyled = styled.header`
   background-color: ${MainGreen};
   padding: 15px;
-  margin-top: 0px;
-  position: fixed;
-  width: 100%;
-  z-index: 10;
 `;
 const HeaderLogo = styled(Logo)`
   font-size: 2rem;
