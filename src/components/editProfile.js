@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from "react";
+import axiosWithAuth from "../utils/axiosWithAuth";
 
 
 const EditProfile = (props) => {
@@ -26,7 +27,14 @@ const EditProfile = (props) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        
+        //  WILL IMPLEMENT ACCURATE API PUT WHEN ENDPOINT IS READY - JOHN
+        // axiosWithAuth().put('/editProfile', formValues).then(res => {
+        //     console.log(res);
+        //     localStorage.setItem('username', formValues.username);
+        //     localStorage.setItem('phone', formValues.phone);
+        //     localStorage.setItem('email', formValues.email);
+        //     localStorage.setItem('password', formValues.password);
+        // }).catch(err => console.error(err));
     }
     return (
         <div>
