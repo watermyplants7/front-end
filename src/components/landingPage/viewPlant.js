@@ -21,4 +21,4 @@ const viewPlant = () => {
     )
 }
 
-export const viewPlant;
+export default viewPlant;
