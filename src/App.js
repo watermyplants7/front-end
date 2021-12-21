@@ -8,6 +8,7 @@ import AddPlant from './components/AddPlant';
 import EditPlant from './components/EditPlant';
 import Logout from './components/logout';
 import { Header } from "./components/Header";
+import EditProfile from "./components/editProfile";
 
 function App() {
   return (
@@ -28,7 +29,7 @@ function App() {
             <Login />
           </Route>
           <PrivateRoute path="/home" component={LandingPage} />
-          <PrivateRoute path="/home" component={LandingPage} />
+          <PrivateRoute path="/editProfile" component={EditProfile} />
           <PrivateRoute path="/edit" component={EditPlant} />
           <PrivateRoute path="/add" component={AddPlant} />
           <PrivateRoute path="/logout" component={Logout} />
