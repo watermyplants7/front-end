@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 
+
+
 const Register = () => {
     const { push } = useHistory();
     const initialValues = {
