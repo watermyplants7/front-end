@@ -8,9 +8,7 @@ const NavbarStyled = styled.header`
   padding: 15px;
 `;
 const HeaderLogo = styled(Logo)`
-  font-size: 2rem;
   text-align: left;
-  font-weight: bolder;
   color: white;
 `;
 
