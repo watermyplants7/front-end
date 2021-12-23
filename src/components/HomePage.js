@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { SecondaryBlue } from "../Theme/Colors";
+import { connect } from 'react-redux';
+import { toggleRegister } from "../actions";
 
 const MainContent = styled.div`
   height: 600px;
@@ -8,6 +10,7 @@ const MainContent = styled.div`
   background-size: cover;
   background-position: center;
   flex: 1;
+  z-index: 1;
 `;
 
 const Sidebar = styled.div`
@@ -34,6 +37,7 @@ const Button = styled.button`
   font-size: 2rem;
   border: 1px solid white;
   border-radius: 10px;
+  cursor: pointer;
 `;
 
 const Wrapper = styled.div`
@@ -41,19 +45,33 @@ const Wrapper = styled.div`
   flex-flow: row nowrap;
 `;
 
-const HomePage = () => {
+const HomePage = (props) => {
+  // const { setOpenRegister } = props;
   return (
     <Wrapper>
+      {/* MainContent = background image */}
       <MainContent></MainContent>
       <Sidebar>
         <h2>
           This is a very eloquent paragraph about why this app saves plant
           lives.{" "}
         </h2>
-        <Button>Register</Button>
+        <Button
+          onClick={() => {
+            props.toggleRegister();
+          }}
+        >
+          Register
+        </Button>
       </Sidebar>
     </Wrapper>
   );
 };
 
-export default HomePage;
+const mapStateToProps = state => {
+  return ({
+    openRegister: state.openRegister
+  })
+}
+
+export default connect(mapStateToProps, {toggleRegister})(HomePage);

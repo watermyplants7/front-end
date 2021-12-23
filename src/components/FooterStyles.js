@@ -1,14 +1,14 @@
 import styled from "styled-components";
+import { SecondaryGreen } from "../Theme/Colors";
 
 export const Box = styled.div`
-  padding: 80px 60px;
-  background: black;
-  /* position: sticky; */
+  padding: 2% 1%;
+  background: ${SecondaryGreen};
   bottom: 0;
   width: 100%;
 
   @media (max-width: 1000px) {
-    padding: 70px 30px;
+    padding: 4% 2%;
   }
 `;
 
@@ -31,7 +31,7 @@ export const Column = styled.div`
 export const Row = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(185px, 1fr));
-  grid-gap: 20px;
+  grid-gap: 5%;
 
   @media (max-width: 1000px) {
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));

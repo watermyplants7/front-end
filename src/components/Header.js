@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { MainGreen } from "../Theme/Colors";
 import { Logo } from "../Theme/Logo";
+import { Link } from 'react-router-dom';
 
 const NavbarStyled = styled.header`
   background-color: ${MainGreen};
@@ -17,8 +18,8 @@ export function Header() {
     <NavbarStyled>
       <HeaderLogo>Water My Plants</HeaderLogo>
       <nav>
-        <l1>about</l1>
-        <l1>login</l1>
+        <Link to={'#'}>about</Link>
+        <Link to={'#'}>login</Link>
       </nav>
     </NavbarStyled>
   );
