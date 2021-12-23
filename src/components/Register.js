@@ -3,7 +3,7 @@ import { useHistory } from "react-router-dom";
 import styled from "styled-components";
 import { Contrast } from "../Theme/Colors";
 import { Logo } from "../Theme/Logo";
-import { connect } from 'react-redux';
+import { connect } from "react-redux";
 import { toggleRegister } from "../actions";
 
 const RegisterForm = styled.div`
@@ -12,15 +12,15 @@ const RegisterForm = styled.div`
   position: fixed;
   top: 75px;
   z-index: 5;
-  max-height: calc(100% - 100px);
-  left: calc(50% - 250px);
+  /* max-height: calc(100% - 100px); */
+  /* left: calc(50% - 250px); */
+  margin-left: 17%;
   display: flex;
   flex-direction: column;
 `;
-export const RegisterButton = styled(Logo)`
+const RegisterButton = styled(Logo)`
   margin: 2%;
   color: white;
-  height: 20px;
   border-radius: 5px;
   padding: 10px;
   text-align: center;
@@ -29,13 +29,13 @@ export const RegisterButton = styled(Logo)`
   background-color: ${Contrast};
 `;
 const RegisterFormShadow = styled.div`
-    position: fixed;
-    height: 1000vh;
-    width: 1000vh;
-    top: 0px;
-    background-color: black;
-    opacity: 0.7;
-    z-index: 4;
+  position: fixed;
+  height: 1000vh;
+  width: 1000vh;
+  top: 0px;
+  background-color: black;
+  opacity: 0.7;
+  z-index: 4;
 `;
 
 const Register = (props) => {
@@ -59,14 +59,14 @@ const Register = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('submitted!!!!');
+    console.log("submitted!!!!");
     // Post API call here
     // Maybe add a notification on successful user registration
     push("/login");
   };
 
   function close() {
-    console.log('clicked to close');
+    console.log("clicked to close");
     props.toggleRegister();
   }
   if (!props.openRegister) return null;
@@ -122,10 +122,10 @@ const Register = (props) => {
   );
 };
 
-const mapStateToProps = state => {
-  return ({
-    openRegister: state.openRegister
-  })
-}
+const mapStateToProps = (state) => {
+  return {
+    openRegister: state.openRegister,
+  };
+};
 
-export default connect(mapStateToProps, {toggleRegister})(Register);
+export default connect(mapStateToProps, { toggleRegister })(Register);
