@@ -19,7 +19,7 @@ function Navbar() {
       <NavbarInnerContainer>
         <LeftContainer>
           <NavbarLinkContainer>
-            <NavbarLink to="/"> Home</NavbarLink>
+            <NavbarLink to="/HomePage"> Home</NavbarLink>
             <NavbarLink to="/login"> Login</NavbarLink>
             <NavbarLink to="/Register">Sign Up</NavbarLink>
             <NavbarLink to="src\components\landingPage\plantList.js">Water My Plants</NavbarLink>
@@ -38,7 +38,7 @@ function Navbar() {
       </NavbarInnerContainer>
       {extendNavbar && (
         <NavbarExtendedContainer>
-          <NavbarLinkExtended to="/landingPage"> Home</NavbarLinkExtended>
+          <NavbarLinkExtended to="/HomePage"> Home</NavbarLinkExtended>
           <NavbarLinkExtended to="/login"> Login </NavbarLinkExtended>
           <NavbarLinkExtended to="/Register"> Sign Up</NavbarLinkExtended>
           <NavbarLinkExtended to="src\components\landingPage\plantList.js">Water My Plants</NavbarLinkExtended>

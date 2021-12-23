@@ -4,17 +4,18 @@ import PrivateRoute from "./components/PrivateRoute";
 import Register from "./components/Register";
 import LandingPage from "./components/landingPage/landingPage";
 import Login from "./components/login";
-import AddPlant from './components/AddPlant';
-import EditPlant from './components/EditPlant';
-import Logout from './components/logout';
-import { Header } from "./components/Navbar";
+import AddPlant from "./components/AddPlant";
+import EditPlant from "./components/EditPlant";
+import Logout from "./components/logout";
 import EditProfile from "./components/editProfile";
 import Footer from "./components/Footer";
-import Navbar from "./components/Navbar";
+import HomePage from "./components/HomePage";
+import Navbar from "./components/Navbar"
 function App() {
   return (
     <div className="App">
       <Navbar />
+      <HomePage />
       <Footer />
       <Router>
         <Switch>

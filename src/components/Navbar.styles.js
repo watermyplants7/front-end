@@ -1,10 +1,11 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { MainGreen } from "../Theme/Colors";
 
 export const NavbarContainer = styled.nav`
   width: 100%;
   height: ${(props) => (props.extendNavbar ? "100vh" : "80px")};
-  background-color: #4d9973;
+  background-color ${MainGreen};
   display: flex;
   flex-direction: column;
   @media (min-width: 700px) {
