@@ -11,11 +11,15 @@ import { Header } from "./components/Header";
 import EditProfile from "./components/editProfile";
 import Footer from "./components/Footer";
 import HomePage from "./components/HomePage";
+import { useState } from "react";
 
 function App() {
+  const [openRegister, setOpenRegister] = useState(false);
+
   return (
     <div className="App">
       <Header />
+      <Register openRegister={openRegister} setOpenRegister={setOpenRegister} />
       <HomePage />
       <Footer />
       <Router>

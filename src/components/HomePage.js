@@ -8,6 +8,7 @@ const MainContent = styled.div`
   background-size: cover;
   background-position: center;
   flex: 1;
+  z-index: 1;
 `;
 
 const Sidebar = styled.div`
@@ -34,6 +35,7 @@ const Button = styled.button`
   font-size: 2rem;
   border: 1px solid white;
   border-radius: 10px;
+  cursor: pointer;
 `;
 
 const Wrapper = styled.div`
@@ -41,7 +43,7 @@ const Wrapper = styled.div`
   flex-flow: row nowrap;
 `;
 
-const HomePage = () => {
+const HomePage = ({ setOpenRegister }) => {
   return (
     <Wrapper>
       <MainContent></MainContent>
@@ -50,7 +52,13 @@ const HomePage = () => {
           This is a very eloquent paragraph about why this app saves plant
           lives.{" "}
         </h2>
-        <Button>Register</Button>
+        <Button
+          onClick={() => {
+            setOpenRegister(true);
+          }}
+        >
+          Register
+        </Button>
       </Sidebar>
     </Wrapper>
   );
