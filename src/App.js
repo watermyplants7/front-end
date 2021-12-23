@@ -14,13 +14,18 @@ import HomePage from "./components/HomePage";
 import { useState } from "react";
 
 function App() {
-  const [openRegister, setOpenRegister] = useState(false);
+  // const [openRegister, setOpenRegister] = useState(false);
 
   return (
     <div className="App">
       <Header />
-      <Register openRegister={openRegister} setOpenRegister={setOpenRegister} />
-      <HomePage setOpenRegister={setOpenRegister}/>
+      <Register
+        // openRegister={openRegister}
+        // setOpenRegister={setOpenRegister}
+      />
+      <HomePage
+        // setOpenRegister={setOpenRegister}
+      />
       <Footer />
       <Router>
         <Switch>

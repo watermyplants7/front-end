@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { SecondaryBlue } from "../Theme/Colors";
+import { connect } from 'react-redux';
+import { toggleRegister } from "../actions";
 
 const MainContent = styled.div`
   height: 600px;
@@ -44,9 +46,10 @@ const Wrapper = styled.div`
 `;
 
 const HomePage = (props) => {
-  const { setOpenRegister } = props;
+  // const { setOpenRegister } = props;
   return (
     <Wrapper>
+      {/* MainContent = background image */}
       <MainContent></MainContent>
       <Sidebar>
         <h2>
@@ -55,7 +58,7 @@ const HomePage = (props) => {
         </h2>
         <Button
           onClick={() => {
-            setOpenRegister(true);
+            props.toggleRegister();
           }}
         >
           Register
@@ -65,4 +68,10 @@ const HomePage = (props) => {
   );
 };
 
-export default HomePage;
+const mapStateToProps = state => {
+  return ({
+    openRegister: state.openRegister
+  })
+}
+
+export default connect(mapStateToProps, {toggleRegister})(HomePage);

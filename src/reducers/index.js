@@ -1,9 +1,10 @@
-import { ADD_PLANT, EDIT_PLANT, DELETE_PLANT } from "../actions";
+import { ADD_PLANT, EDIT_PLANT, DELETE_PLANT, TOGGLE_REGISTER } from "../actions";
 
 const initialState = {
     plants: [],
     isFetching: false,
-    error:''
+    error: '',
+    openRegister: false
 };
 
 const reducer = (state = initialState, action) => {
@@ -25,7 +26,12 @@ const reducer = (state = initialState, action) => {
             return ({
                 ...state,
                 // NOT FINISHED, NEED API ENDPOINT
-            })
+            });
+        case TOGGLE_REGISTER:
+            return ({
+                ...state,
+               openRegister: !state.openRegister 
+            });
         default: {
             return state;
         }

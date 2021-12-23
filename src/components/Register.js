@@ -3,6 +3,8 @@ import { useHistory } from "react-router-dom";
 import styled from "styled-components";
 import { Contrast } from "../Theme/Colors";
 import { Logo } from "../Theme/Logo";
+import { connect } from 'react-redux';
+import { toggleRegister } from "../actions";
 
 const RegisterForm = styled.div`
   width: 66%;
@@ -28,8 +30,8 @@ export const RegisterButton = styled(Logo)`
 `;
 const RegisterFormShadow = styled.div`
     position: fixed;
-    height: 100%
-    width: 100%
+    height: 100vh;
+    width: 100vh;
     top: 0px;
     background-color: black;
     opacity: 0.7;
@@ -38,7 +40,7 @@ const RegisterFormShadow = styled.div`
 
 const Register = (props) => {
   const { push } = useHistory();
-  const { openRegister, setOpenRegister } = props;
+  // const { openRegister, setOpenRegister } = props;
   const initialValues = {
     username: "",
     phone: "",
@@ -64,9 +66,10 @@ const Register = (props) => {
   };
 
   function close() {
-    setOpenRegister(false);
+    console.log('clicked to close');
+    props.toggleRegister();
   }
-  if (!openRegister) return null;
+  if (!props.openRegister) return null;
 
   return (
     <div>
@@ -119,4 +122,10 @@ const Register = (props) => {
   );
 };
 
-export default Register;
+const mapStateToProps = state => {
+  return ({
+    openRegister: state.openRegister
+  })
+}
+
+export default connect(mapStateToProps, {toggleRegister})(Register);
