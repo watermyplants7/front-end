@@ -14,27 +14,14 @@ import HomePage from "./components/HomePage";
 import { useState } from "react";
 
 function App() {
-  // const [openRegister, setOpenRegister] = useState(false);
-
   return (
     <div className="App">
       <Header />
-      <Register
-        // openRegister={openRegister}
-        // setOpenRegister={setOpenRegister}
-      />
-      <HomePage
-        // setOpenRegister={setOpenRegister}
-      />
-      <Footer />
       <Router>
         <Switch>
-          <Route path="/register">
+          <Route exact path="/">
             <Register />
-          </Route>
-          <Route exact path="/"></Route>
-          <Route path="/register">
-            <Register />
+            <HomePage />
           </Route>
           <Route path="/login">
             <Login />
@@ -45,6 +32,7 @@ function App() {
           <PrivateRoute path="/add" component={AddPlant} />
           <PrivateRoute path="/logout" component={Logout} />
         </Switch>
+        <Footer />
       </Router>
     </div>
   );

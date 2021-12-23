@@ -24,6 +24,7 @@ const RegisterButton = styled(Logo)`
   border-radius: 5px;
   padding: 10px;
   text-align: center;
+  font-size: 2rem;
   width: 200px;
   cursor: pointer;
   background-color: ${Contrast};
