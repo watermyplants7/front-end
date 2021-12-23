@@ -20,7 +20,7 @@ function App() {
     <div className="App">
       <Header />
       <Register openRegister={openRegister} setOpenRegister={setOpenRegister} />
-      <HomePage />
+      <HomePage setOpenRegister={setOpenRegister}/>
       <Footer />
       <Router>
         <Switch>

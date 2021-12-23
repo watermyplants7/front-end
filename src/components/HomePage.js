@@ -43,7 +43,8 @@ const Wrapper = styled.div`
   flex-flow: row nowrap;
 `;
 
-const HomePage = ({ setOpenRegister }) => {
+const HomePage = (props) => {
+  const { setOpenRegister } = props;
   return (
     <Wrapper>
       <MainContent></MainContent>

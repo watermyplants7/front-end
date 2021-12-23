@@ -36,8 +36,9 @@ const RegisterFormShadow = styled.div`
     z-index: 4;
 `;
 
-const Register = ({ openRegister, setOpenRegister }) => {
+const Register = (props) => {
   const { push } = useHistory();
+  const { openRegister, setOpenRegister } = props;
   const initialValues = {
     username: "",
     phone: "",
@@ -56,6 +57,7 @@ const Register = ({ openRegister, setOpenRegister }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log('submitted!!!!');
     // Post API call here
     // Maybe add a notification on successful user registration
     push("/login");
