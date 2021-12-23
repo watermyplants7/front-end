@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-const StyleLogin = styled.div``;
+const StyleLogin = styled.div`
+  display: flex;
+  flex-flow: row nowrap;
+`;
 
 const initialFormValues = {
   phone: "",
