@@ -12,11 +12,31 @@ const RegisterForm = styled.div`
   position: fixed;
   top: 75px;
   z-index: 5;
-  /* max-height: calc(100% - 100px); */
-  /* left: calc(50% - 250px); */
   margin-left: 17%;
   display: flex;
   flex-direction: column;
+  padding: 3%;
+
+  h2 {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 3rem;
+    margin-bottom: 2%;
+    color: ${Contrast};
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  input {
+    width: 60%;
+    margin-bottom: 2%;
+    padding: 1.5% 1.5% 1.5% 2%;
+  }
 `;
 const RegisterButton = styled(Logo)`
   margin: 2%;
@@ -79,42 +99,38 @@ const Register = (props) => {
         <div className="register-form-container">
           <h2>Register a New Account</h2>
           <form className="register-form">
-            <div>
-              <label>Username</label>
-              <input
-                type="text"
-                name="username"
-                onChange={handleChange}
-                value={formValues.username}
-              />
-            </div>
-            <div>
-              <label>Phone #</label>
-              <input
-                type="text"
-                name="phone"
-                onChange={handleChange}
-                value={formValues.phone}
-              />
-            </div>
-            <div>
-              <label>Email</label>
-              <input
-                type="email"
-                name="email"
-                onChange={handleChange}
-                value={formValues.email}
-              />
-            </div>
-            <div>
-              <label>Password</label>
-              <input
-                type="password"
-                name="password"
-                onChange={handleChange}
-                value={formValues.password}
-              />
-            </div>
+            {/* <label>Username</label> */}
+            <input
+              type="text"
+              name="username"
+              onChange={handleChange}
+              value={formValues.username}
+              placeholder="username"
+            />
+            {/* <label>Phone #</label> */}
+            <input
+              type="text"
+              name="phone"
+              onChange={handleChange}
+              value={formValues.phone}
+              placeholder="phone number"
+            />
+            {/* <label>Email</label> */}
+            <input
+              type="email"
+              name="email"
+              onChange={handleChange}
+              value={formValues.email}
+              placeholder="email"
+            />
+            {/* <label>Password</label> */}
+            <input
+              type="password"
+              name="password"
+              onChange={handleChange}
+              value={formValues.password}
+              placeholder="password"
+            />
             <RegisterButton onClick={handleSubmit}>Sign Up</RegisterButton>
           </form>
         </div>
