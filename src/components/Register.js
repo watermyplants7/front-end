@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import styled from "styled-components";
-import { Contrast } from "../Theme/Colors";
+import { Contrast, LightGreen } from "../Theme/Colors";
 import { Logo } from "../Theme/Logo";
 import { connect } from "react-redux";
 import { toggleRegister } from "../actions";
 
 const RegisterForm = styled.div`
   width: 66%;
-  background-color: white;
+  background-color: ${LightGreen};
   position: fixed;
   top: 75px;
   z-index: 5;
