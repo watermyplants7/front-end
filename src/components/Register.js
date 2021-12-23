@@ -30,8 +30,8 @@ export const RegisterButton = styled(Logo)`
 `;
 const RegisterFormShadow = styled.div`
     position: fixed;
-    height: 100vh;
-    width: 100vh;
+    height: 1000vh;
+    width: 1000vh;
     top: 0px;
     background-color: black;
     opacity: 0.7;
