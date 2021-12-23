@@ -7,14 +7,14 @@ import Login from "./components/login";
 import AddPlant from './components/AddPlant';
 import EditPlant from './components/EditPlant';
 import Logout from './components/logout';
-import { Header } from "./components/Header";
+import { Header } from "./components/Navbar";
 import EditProfile from "./components/editProfile";
 import Footer from "./components/Footer";
-
+import Navbar from "./components/Navbar";
 function App() {
   return (
     <div className="App">
-      <Header />
+      <Navbar />
       <Footer />
       <Router>
         <Switch>
@@ -22,7 +22,7 @@ function App() {
             <Register />
           </Route>
           <Route exact path="/">
-            <div>pre-login home page</div>
+            <div>Water My Plants</div>
           </Route>
           <Route path="/register">
             <Register />

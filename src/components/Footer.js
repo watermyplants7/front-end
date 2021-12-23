@@ -11,7 +11,7 @@ import {
 const Footer = () => {
   return (
     <Box>
-      <h1 style={{ color: "green", 
+      <h1 style={{ color: "#4d9973", 
                    textAlign: "center", 
                    marginTop: "-50px" }}>
         Water MY Plants
