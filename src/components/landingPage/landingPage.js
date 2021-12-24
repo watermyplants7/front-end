@@ -5,7 +5,6 @@ import { connect } from 'react-redux';
 import { addPlant } from '../../actions';
 
 const LandingPage = (props) => {
-    const { plants } = props;
 
     useEffect(() => {
         //API CALL
