@@ -11,7 +11,6 @@ import { Header } from "./components/Header";
 import EditProfile from "./components/editProfile";
 import Footer from "./components/Footer";
 import HomePage from "./components/HomePage";
-import { useState } from "react";
 
 function App() {
   return (
