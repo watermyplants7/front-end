@@ -1,6 +1,6 @@
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import PrivateRoute from "./components/PrivateRoute";
+// import PrivateRoute from "./components/PrivateRoute";
 import Register from "./components/Register";
 import LandingPage from "./components/landingPage/landingPage";
 import Login from "./components/login";
@@ -25,11 +25,11 @@ function App() {
           <Route path="/login">
             <Login />
           </Route>
-          <PrivateRoute path="/home" component={LandingPage} />
-          <PrivateRoute path="/editProfile" component={EditProfile} />
-          <PrivateRoute path="/edit" component={EditPlant} />
-          <PrivateRoute path="/add" component={AddPlant} />
-          <PrivateRoute path="/logout" component={Logout} />
+          <Route path="/home" component={LandingPage} />
+          <Route path="/editProfile" component={EditProfile} />
+          <Route path="/edit" component={EditPlant} />
+          <Route path="/add" component={AddPlant} />
+          <Route path="/logout" component={Logout} />
         </Switch>
         <Footer />
       </Router>
